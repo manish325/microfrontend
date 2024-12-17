@@ -1,0 +1,12 @@
+#angular-container
+/angular-container/node_modules
+/angular-container/dist
+/angular-container/.angular
+
+#angular-mfe
+/angular-mfe/node_modules
+/angular-mfe/dist
+/angular-mfe/.angular
+
+#react-container
+/react-mfe/node_modules
