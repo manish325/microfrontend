@@ -1,0 +1,40 @@
+$primary-color: #4a90e2;
+$accent-color: #7b1fa2;
+$background-color: #f4f4f4;
+$text-color: #ffffff;
+$box-shadow-color: rgba(0, 0, 0, 0.15);
+
+.task-card {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px 25px;
+    border-radius: 10px;
+    background-color: $background-color;
+    box-shadow: 0px 4px 10px $box-shadow-color;
+    color: #333;
+
+    h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $primary-color;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $accent-color;
+        margin-bottom: 8px;
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    }
+}

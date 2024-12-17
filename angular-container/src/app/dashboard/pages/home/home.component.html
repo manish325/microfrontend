@@ -1,0 +1,36 @@
+<main class="home">
+    <angular-header class="angular-header" [username]="user.name"></angular-header>
+    <div class="container">
+        <div class="container-header">
+            <h1 class="page-title">Your Task Dashboard</h1>
+            <button class="add-task-btn" (click)="openAddTaskDialog()">
+                <span>
+                    +  
+                </span>
+                <span>
+                    Add New Task
+                </span>
+            </button>
+        </div>
+
+        <div class="task-wrapper">
+            <ng-container *ngIf="user.tasks.length > 0">
+                <ng-container *ngFor="let task of user.tasks">
+                    <react-tasklist 
+                        [attr.task]="task | json" 
+                        (taskEdited)="getOnEdit($event.detail)"
+                        class="task-card" 
+                        (openTaskToEdit)="openTaskToEdit($event.detail)">
+                    </react-tasklist>
+                </ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="user.tasks.length === 0">
+                <div class="empty-task-card">
+                    <h2>No Tasks Available</h2>
+                    <span>Click "Add New Task" to get started</span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,113 @@
+// Colors consistent with the layout component
+$primary-color: #4a90e2; // same as layout
+$background-color: #ffffff; // Matches the background from layout
+$accent-color: #333; // Text color
+$input-background: rgba(255, 255, 255, 0.9);
+$input-border: rgba(74, 144, 226, 0.3); // Soft border that matches layout scheme
+$button-background: #4a90e2;
+$button-hover-background: darken($button-background, 10%);
+$border-radius: 6px;
+// $primary-color: #4a90e2;
+// $accent-color: #7b1fa2;
+// $background-color: #f4f4f4;
+// $text-color: #ffffff;
+// $box-shadow-color: rgba(0, 0, 0, 0.15);
+
+
+// Container styling
+.login-container {
+    max-width: 480px;
+    width: 90%; // Responsive width for mobile
+    margin: 60px auto; // Reduced margin to avoid excess vertical scroll
+    padding: 30px 20px; // Balanced padding
+    background-color: $background-color;
+    border-radius: $border-radius;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial, sans-serif';
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 1.5rem; // Balanced gap between items
+
+    h2 {
+        color: $primary-color;
+        font-size: 1.75rem;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 10px;
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+// Form groups with more balanced spacing
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    label {
+        font-size: 1rem;
+        color: $accent-color;
+        font-weight: 500;
+        text-align: start !important;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        background-color: $input-background !important;
+        border: 1px solid $input-border;
+        border-radius: $border-radius;
+        font-size: 1rem;
+        color: $accent-color;
+        box-sizing: border-box;
+
+        &:focus {
+            border-color: $primary-color;
+            outline: none;
+            box-shadow: 0 0 5px rgba($primary-color, 0.3);
+        }
+    }
+}
+
+// Button styling
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: $button-background;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    background: linear-gradient(135deg, #4a90e2, #7b1fa2) !important;
+
+    &:hover {
+        background-color: $button-hover-background;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
+}
